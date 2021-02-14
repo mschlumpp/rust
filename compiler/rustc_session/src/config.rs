@@ -2435,7 +2435,9 @@ crate mod dep_tracking {
     use rustc_feature::UnstableFeatures;
     use rustc_span::edition::Edition;
     use rustc_target::spec::{CodeModel, MergeFunctions, PanicStrategy, RelocModel};
-    use rustc_target::spec::{RelroLevel, SanitizerSet, SplitDebuginfo, TargetTriple, TlsModel};
+    use rustc_target::spec::{
+        RelroLevel, SanitizerSet, SplitDebuginfo, TargetTriple, TlsModel, XrayModeSet,
+    };
     use std::collections::hash_map::DefaultHasher;
     use std::collections::BTreeMap;
     use std::hash::Hash;
@@ -2504,6 +2506,7 @@ crate mod dep_tracking {
         NativeLib,
         NativeLibKind,
         SanitizerSet,
+        XrayModeSet,
         CFGuard,
         TargetTriple,
         Edition,
